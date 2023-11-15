@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crie seu evento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page">
+        <header>
+            <h1>Crie e compartilhe seu evento.</h1>
+            <h6>O primeiro passo, é preencher esse formulário de inscrição.</h6>
+        </header>
+    </div>
+    <form id="my-form">
+        <input type="reset" class="reset" value="Limpar"/>
+        <fieldset class="box infos">
+            <legend>Informações do Evento</legend>
+            
+            <label for="event-title">Título do evento <span>(miníno 8 caracteres)</span>
+                <input type="text" id="event-title" minlength="8" required/>
+            </label>
+
+            <label for="event-link">Link do evento <span>(começe com https://)</span>
+                <input type="url" id="event-link"/>
+            </label>
+
+            <label for="event-contact">Whatsapp para contato <span>(somente números, digite o DDD)</span>
+                <input type="number" id="event-contact" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==13) return false;"/>
+            </label>
+
+            <label for="extra-info">Informações extras
+                <textarea id="extra-info" ></textarea>
+            </label>
+
+            <label for="event-category">Categoria
+                <select id="event-category">
+                    <option value="" disabled selected>Tipo do evento</option>
+                    <option value="aniversario">Aniversário</option>
+                    <option value="campeonato">Campeonato</option>
+                    <option value="casamento">Casamento</option>
+                    <option value="conferencia">Conferência</option>
+                    <option value="formatura">Formatura</option>
+                    <option value="noivado">Noivado</option>
+                    <option value="palestra">Palestra</option>
+                    <option value="retiro">Retiro</option>
+                    <option value="reuniao">Reunião</option>
+                    <option value="show">Show</option>
+                    <option value="sarau">Sarau</option>
+                    <option value="treinamento">Treinamento</option>
+                    <option value="outro">Outro</option>
+                </select>
+            </label>
+        </fieldset>
+
+        <fieldset class="box privacy">
+            <legend>Privacidade</legend>
+
+            <label for="user-email">Email do administrador <span>(digite um email válido)</span>
+                <input type="email" id="user-email"/>
+            </label>
+
+            <label for="user-password">Senha de acesso para os participantes <span>(mínimo de 8 caracteres)</span>
+                <input type="password" id="user-password" minlength="8"/>
+            </label>
+
+            <div class="checkbox-wrapper">
+                <input type="checkbox" id="event-private"/>
+                <label for="event-private">Evento privado</label>
+            </div>
+        </fieldset>
+
+        <fieldset class="box local">
+            <legend>Local</legend>
+            <label for="event-street"> Rua
+                <input type="text" id="event-street" required/>
+            </label>
+            <label for="event-neighborhood"> Bairro
+                <input type="text" id="event-neighborhood" required/>
+            </label>
+            <label for="event-city"> Cidade
+                <input type="text" id="event-city" required/>
+            </label>
+        </fieldset>
+
+        <fieldset class="box date">
+            <legend>Dia e hora</legend>
+   
+            <div class="date-info">
+                <label for="event-date"> Data
+                    <input type="date" id="event-date" required/>
+                </label>
+
+                <label for="event-start"> Das
+                    <input type="time" id="event-start" placeholder="19:00" required/>
+                </label>
+
+                <label for="event-end"> Até
+                    <input type="time" id="event-end" placeholder="23:00" required/>
+                </label>
+            </div>
+        </fieldset>
+    </form>
+    <footer class="submit">
+        <button type="submit" form="my-form">Salvar evento</button>
+    </footer>
+</body>
+</html>

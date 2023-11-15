@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: #DBDBDC;
+}
+
+body::after{
+    content: '';
+    width: 100%;
+    height: 300px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #0D0C33;
+}
+
+.page{
+    width: 70%;
+    margin: auto;
+}
+
+header{
+    width: 319px;
+    margin-top: 70px;
+    padding-bottom: 1rem;
+}
+
+header h1{
+    font-family: 'Archivo', sans-serif;
+    line-height: 42px;
+    font-size: 36px;
+    color: #FFF;
+}
+
+header h6{
+    margin-top: 1rem;
+    line-height: 26px;
+    font-size: 16px;
+    font-weight: normal;
+    color: #5452F5;
+}
+
+form{
+    width: 70%;
+    position: relative;
+    height: auto;
+    margin: auto;
+    border-radius: 8px 8px 0 0;
+    background-color: #FAFAFA;
+}
+
+fieldset{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 2rem 3rem;
+    border: none;
+
+}
+
+fieldset legend{
+    width: 100%;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 2rem 0 16px 0;
+    border-bottom: 1px solid #E6E6F0;
+
+}
+
+fieldset label{
+    font-family: 'Archivo', sans-serif;
+    font-size: 14px;
+    padding-top: 1rem;
+    color: #4E4958;
+}
+
+fieldset label span{
+    font-size: 12px;
+    color: #C1BCCC;
+}
+
+fieldset label span:hover{
+    color: #353535;
+}
+
+fieldset input,
+fieldset textarea,
+fieldset select{
+    display: block;
+    width: 100%;
+    height: 45px;
+    margin-top: 0.5rem;
+    padding: 0 1rem;
+    border-radius: 8px;
+    border: 1px solid #E6E6F0;
+    color: #353535;
+    background-color: #FAFAFC;
+}
+
+fieldset textarea{
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 168px;
+    min-height: 168px;
+    padding-top: 1rem;
+}
+
+fieldset select{
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%239C98A6' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+    background-repeat: no-repeat;
+    background-position: right 24px top 50%;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input:invalid{
+    border: 1px solid #FF1010;
+}
+.checkbox-wrapper{
+    width: fit-content;
+    position: relative;
+}
+
+.checkbox-wrapper label{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.checkbox-wrapper input{
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 0;
+    top: 10px;
+    opacity: 0;
+}
+
+.checkbox-wrapper label::before{
+    content: '';
+    width: 24px;
+    height: 24px;
+    display: block;
+    border-radius: 8px;
+    border: 1px solid #E6E6F0;
+}
+
+.checkbox-wrapper input:checked + label::before{
+    background-image: url("data:image/svg+xml,%3Csvg width='18' height='14' viewBox='0 0 18 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 11.17L1.83 7L0.410004 8.41L6 14L18 2L16.59 0.589996L6 11.17Z' fill='%2342D3FF'/%3E%3C/svg%3E ");
+    background-repeat: no-repeat;
+    background-position: left 50% top 50%;
+}
+
+
+.checkbox-wrapper input:focus + label::before{
+    outline: 2px solid #000;
+}
+
+.date-info {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.date-info label:first-child{
+    width: 100%;
+}
+
+.date-info label,
+.date-info label input{
+    cursor: pointer;
+}
+
+.submit{
+    width: 70%;
+    height: 136px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 2rem;
+    border-radius: 0 0 8px 8px;
+    background-color: #F0F0F4;
+    border-top: 1.5px solid #EBECF0;
+}
+
+.submit button {
+    width: 90%;
+    height: 56px;
+    margin-top: 1rem;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    color: #FFF;
+    background-color: #5452F5;
+}
+
+.submit button:hover {
+    filter: opacity(90%);
+}
+
+.reset{
+    position: absolute;
+    right: 100px;
+    top: 45px;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    background-color: transparent;
+    color: #4E4958;
+}
+
+@media(max-width:688px){
+    .date-info{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .reset{
+        position: absolute;
+        right: inherit;
+        left: 50px;
+        top: 100px;
+    }
+}
+
+@media(max-width:428px){
+    header h1{
+        font-size: 25px;
+    }
+
+    header h6{
+        width: 250px;
+    }
+ 
+    .page,
+    form,
+    .submit{
+        width: 80%;
+    }
+
+    .reset{
+        top: 115px;
+    }
+
+    fieldset legend{
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .reset{
+        color: #C1BCCC;
+    }
+}
